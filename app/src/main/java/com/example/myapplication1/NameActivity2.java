@@ -8,21 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-
-//public class NameActivity2 extends AppCompatActivity {
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_name2);
-//        Intent i = getIntent();
-//        String message = i.getStringExtra("COOL");
-//        ((TextView)findViewById(R.id.textView)).setText(message);
-//    }
-//
-//
-//}
-
 public class NameActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +24,6 @@ public class NameActivity2 extends AppCompatActivity {
         thankYouButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // User is happy, set the result and finish
                 setResult(RESULT_OK, new Intent().putExtra("RESULT_CODE", 1));
                 finish();
             }
@@ -48,7 +32,6 @@ public class NameActivity2 extends AppCompatActivity {
         dontCallMeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // User wants to change their name, set the result and finish
                 setResult(RESULT_OK, new Intent().putExtra("RESULT_CODE", 0));
                 finish();
             }
